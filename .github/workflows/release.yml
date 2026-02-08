@@ -11,13 +11,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Build archive
+      - name: Build app
         run: |
           mkdir -p build dist
-          xcodebuild -project WaterReminder.xcodeproj -target WaterReminder -configuration Release -archivePath build/WaterReminder.xcarchive archive CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO
-      - name: Package .app
+          xcodebuild -project WaterReminder.xcodeproj -target WaterReminder -configuration Release build CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO
+      - name: Package app
         run: |
-          cp -R build/WaterReminder.xcarchive/Products/Applications/WaterReminder.app dist/WaterReminder.app
+          cp -R build/Release/WaterReminder.app dist/WaterReminder.app
           cd dist
           /usr/bin/zip -r WaterReminder-mac.zip WaterReminder.app
       - name: Create Release
