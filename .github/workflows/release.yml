@@ -14,7 +14,7 @@ jobs:
       - name: Build archive
         run: |
           mkdir -p build dist
-          xcodebuild -project WaterReminder.xcodeproj -scheme WaterReminder -configuration Release -archivePath build/WaterReminder.xcarchive archive CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO
+          xcodebuild -project WaterReminder.xcodeproj -target WaterReminder -configuration Release -archivePath build/WaterReminder.xcarchive archive CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO
       - name: Package .app
         run: |
           cp -R build/WaterReminder.xcarchive/Products/Applications/WaterReminder.app dist/WaterReminder.app
