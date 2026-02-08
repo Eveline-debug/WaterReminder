@@ -23,6 +23,12 @@ jobs:
           cp -R build/Release/WaterReminder.app dist/WaterReminder.app
           cd dist
           /usr/bin/zip -r WaterReminder-mac.zip WaterReminder.app
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: WaterReminder-mac.zip
+          path: dist/WaterReminder-mac.zip
+          if-no-files-found: error
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
