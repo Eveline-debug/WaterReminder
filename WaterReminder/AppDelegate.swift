@@ -5,7 +5,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var reminderTimer: Timer?
     private var overlay: OverlayWindow?
     private var pausedUntil: Date?
-    private var testMode = false
     private let defaults = UserDefaults.standard
     private let enabledKey = "reminderEnabled"
     private let messages = [
@@ -21,11 +20,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         configureStatusItem()
         registerSleepWakeNotifications()
         if isEnabled {
-            if testMode {
-                scheduleNextReminder(interval: 10)
-            } else {
-                scheduleInitialThenHourly(initialDelay: 10)
-            }
+            scheduleInitialThenHourly(initialDelay: 10)
         }
     }
 
@@ -39,8 +34,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(NSMenuItem(title: toggleTitle, action: #selector(toggleEnabled), keyEquivalent: ""))
         menu.addItem(NSMenuItem(title: "暂停提醒（2小时）", action: #selector(pauseTwoHours), keyEquivalent: ""))
         menu.addItem(NSMenuItem(title: "立即提醒一次", action: #selector(triggerOnce), keyEquivalent: ""))
-        let testTitle = testMode ? "关闭测试模式（每10秒）" : "开启测试模式（每10秒）"
-        menu.addItem(NSMenuItem(title: testTitle, action: #selector(toggleTestMode), keyEquivalent: ""))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "退出", action: #selector(quit), keyEquivalent: ""))
         menu.items.forEach { $0.target = self }
@@ -51,7 +44,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         defaults.set(!isEnabled, forKey: enabledKey)
         configureStatusItem()
         if isEnabled {
-            scheduleNextReminder(interval: testMode ? 10 : 3600)
+            scheduleNextReminder(interval: 3600)
         } else {
             reminderTimer?.invalidate()
             reminderTimer = nil
@@ -64,14 +57,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc private func triggerOnce() {
         triggerReminderIfNeeded()
-    }
-
-    @objc private func toggleTestMode() {
-        testMode.toggle()
-        configureStatusItem()
-        if isEnabled {
-            scheduleNextReminder(interval: testMode ? 10 : 3600)
-        }
     }
 
     private var isEnabled: Bool {
@@ -90,11 +75,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc private func handleWake(_ n: Notification) {
         if isEnabled {
-            if testMode {
-                scheduleNextReminder(interval: 10)
-            } else {
-                scheduleInitialThenHourly(initialDelay: 10)
-            }
+            scheduleInitialThenHourly(initialDelay: 10)
         }
     }
 
