@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Xcode
+DerivedData/
+build/
+*.xcworkspace/
+xcuserdata/
+*.xcuserstate
+
+# SwiftPM (not used now, safe to ignore)
+.swiftpm/
+
+# IDE
+.idea/
+.vscode/

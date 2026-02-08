@@ -1,0 +1,204 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A1B2C3D4E5F000100000001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B2C3D4E5F000100000002 /* AppDelegate.swift */; };
+		0A1B2C3D4E5F000100000003 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B2C3D4E5F000100000004 /* main.swift */; };
+		0A1B2C3D4E5F000100000005 /* OverlayWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B2C3D4E5F000100000006 /* OverlayWindow.swift */; };
+		0A1B2C3D4E5F00010000000A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A1B2C3D4E5F00010000000B /* Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A1B2C3D4E5F000100000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0A1B2C3D4E5F000100000004 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0A1B2C3D4E5F000100000006 /* OverlayWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindow.swift; sourceTree = "<group>"; };
+		0A1B2C3D4E5F00010000000B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A1B2C3D4E5F000100000010 /* WaterReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = WaterReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A1B2C3D4E5F000100000020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A1B2C3D4E5F000100000030 = {
+			isa = PBXGroup;
+			children = (
+				0A1B2C3D4E5F000100000040 /* WaterReminder */,
+				0A1B2C3D4E5F000100000050 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A1B2C3D4E5F000100000040 /* WaterReminder */ = {
+			isa = PBXGroup;
+			children = (
+				0A1B2C3D4E5F000100000002 /* AppDelegate.swift */,
+				0A1B2C3D4E5F000100000006 /* OverlayWindow.swift */,
+				0A1B2C3D4E5F000100000004 /* main.swift */,
+				0A1B2C3D4E5F00010000000B /* Info.plist */,
+			);
+			path = WaterReminder;
+			sourceTree = "<group>";
+		};
+		0A1B2C3D4E5F000100000050 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A1B2C3D4E5F000100000010 /* WaterReminder.app */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A1B2C3D4E5F000100000060 /* WaterReminder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A1B2C3D4E5F000100000090 /* Build configuration list for PBXNativeTarget "WaterReminder" */;
+			buildPhases = (
+				0A1B2C3D4E5F000100000070 /* Sources */,
+				0A1B2C3D4E5F000100000020 /* Frameworks */,
+				0A1B2C3D4E5F000100000080 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WaterReminder;
+			productName = WaterReminder;
+			productReference = 0A1B2C3D4E5F000100000010 /* WaterReminder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A1B2C3D4E5F0001000000A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					0A1B2C3D4E5F000100000060 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0A1B2C3D4E5F0001000000D0 /* Build configuration list for PBXProject "WaterReminder" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			mainGroup = 0A1B2C3D4E5F000100000030;
+			productRefGroup = 0A1B2C3D4E5F000100000050 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A1B2C3D4E5F000100000060 /* WaterReminder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A1B2C3D4E5F000100000080 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A1B2C3D4E5F00010000000A /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A1B2C3D4E5F000100000070 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A1B2C3D4E5F000100000003 /* main.swift in Sources */,
+				0A1B2C3D4E5F000100000001 /* AppDelegate.swift in Sources */,
+				0A1B2C3D4E5F000100000005 /* OverlayWindow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0A1B2C3D4E5F0001000000E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WaterReminder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.WaterReminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0A1B2C3D4E5F0001000000F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WaterReminder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.WaterReminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0A1B2C3D4E5F000100000091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+			};
+			name = Debug;
+		};
+		0A1B2C3D4E5F000100000092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A1B2C3D4E5F0001000000D0 /* Build configuration list for PBXProject "WaterReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A1B2C3D4E5F000100000091 /* Debug */,
+				0A1B2C3D4E5F000100000092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A1B2C3D4E5F000100000090 /* Build configuration list for PBXNativeTarget "WaterReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A1B2C3D4E5F0001000000E0 /* Debug */,
+				0A1B2C3D4E5F0001000000F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 0A1B2C3D4E5F0001000000A0 /* Project object */;
+}
